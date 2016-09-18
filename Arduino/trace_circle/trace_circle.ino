@@ -7,7 +7,7 @@
 #define MAX_ANGLE 75          // サーボの角度の上限
 #define WAIT_TIME 10         // 1ループの待ち時間
 #define TIME_CYCLE  (2.0f)    // 回転周期[sec]
-#define CIRCLE_R  (200.0f)    // 円の半径
+#define CIRCLE_R  (150.0f)    // 円の半径
 
 Servo servo[3];
 IPK ipk;
@@ -37,7 +37,7 @@ void draw_circle() {
   // 目標座標を決定
   pos_val[0] = (int)(CIRCLE_R * cos( theta_rad ));
   pos_val[1] = (int)(CIRCLE_R * sin( theta_rad ));
-  pos_val[2] = -450;
+  pos_val[2] = -400;
 
   // サーボに出力
   servo_output(pos_val);
